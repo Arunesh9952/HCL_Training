@@ -1,0 +1,11 @@
+<p>countries works!</p>
+<input type="text" placeholder="Search Country" [(ngModel)]="searchTerm" />
+<button (click)="searchCountries()">Search</button>
+
+<div *ngFor="let country of countries">
+    <h1 >{{country.name.common}}</h1>
+    <h2>{{country.capital}}</h2>
+    <h1>{{country.region}}</h1>
+    <h2>{{country.population}}</h2>
+    <img [src]="country.flags.png" width="50px">
+    </div>

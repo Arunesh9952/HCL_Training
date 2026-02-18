@@ -1,0 +1,34 @@
+<h2>Freshdesk Ticket CRUD</h2>
+
+<div class="form">
+  <input type="email" placeholder="Email" [(ngModel)]="email" />
+  <input type="text" placeholder="Subject" [(ngModel)]="subject" />
+  <textarea placeholder="Description" [(ngModel)]="description"></textarea>
+
+  <button (click)="saveTicket()">
+    {{ editMode ? 'Update Ticket' : 'Create Ticket' }}
+  </button>
+</div>
+
+<hr />
+
+<h3>Tickets List</h3>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Subject</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr *ngFor="let ticket of tickets">
+    <td>{{ ticket.id }}</td>
+    <td>{{ ticket.subject }}</td>
+    <td>{{ ticket.status }}</td>
+    <td>
+      <button (click)="editTicket(ticket)">Edit</button>
+      <button (click)="deleteTicket(ticket.id)">Delete</button>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,35 @@
+<h2>Student Form</h2>
+<input type="text" placeholder="ID" [(ngModel)]="studentObj.id" />
+<input type="text" placeholder="Name" [(ngModel)]="studentObj.studentName" />
+<input
+  type="text"
+  placeholder="Department"
+  [(ngModel)]="studentObj.department"
+/>
+
+<button (click)="addStudent()">Add</button>
+<button (click)="updateStudent()">Update</button>
+
+<hr />
+
+<h2>Student List</h2>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Department</th>
+    <th>Action</th>
+  </tr>
+
+  <tr *ngFor="let s of students">
+    <td>{{ s.id }}</td>
+    <td>{{ s.studentName }}</td>
+    <td>{{ s.department }}</td>
+
+    <td>
+      <button (click)="editStudent(s)">Edit</button>
+      <button (click)="deleteStudent(s.id)">Delete</button>
+    </td>
+  </tr>
+</table>

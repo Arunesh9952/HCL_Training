@@ -1,0 +1,14 @@
+<p>matches works!</p>
+
+<input [(ngModel)]="searchText" placeholder="Search Matches" />
+
+<div *ngFor="let m of matches">
+<div *ngIf="m.name.toLowerCase().includes(searchText.toLowerCase())">
+
+<a [routerLink]="['/match',m.id]">
+<h3>{{m.name}}</h3>
+<p>{{m.status}}</p>
+</a>
+
+</div>
+</div>

@@ -1,0 +1,10 @@
+
+<h2>Create Freshdesk Ticket</h2>
+
+<form (ngSubmit)="createTicket()">
+  <input [(ngModel)]="ticket.email" name="email" required placeholder="Email">
+  <input [(ngModel)]="ticket.subject" name="subject" required placeholder="Subject">
+  <textarea [(ngModel)]="ticket.description" name="description" required placeholder="Description"></textarea>
+
+  <button type="submit">Create Ticket</button>
+</form>

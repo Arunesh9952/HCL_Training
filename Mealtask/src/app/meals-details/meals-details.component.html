@@ -1,0 +1,9 @@
+<!-- <button (click)="goBack()">⬅ Back</button> -->
+
+<div *ngIf="meal">
+  <h2>{{ meal.strMeal }}</h2>
+  <img [src]="meal.strMealThumb" />
+  <p><b>Category:</b> {{ meal.strCategory }}</p>
+  <p><b>Area:</b> {{ meal.strArea }}</p>
+  <p><b>Instructions:</b> {{ meal.strInstructions }}</p>
+</div>

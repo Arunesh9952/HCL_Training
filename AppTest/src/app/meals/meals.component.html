@@ -1,0 +1,6 @@
+<h2>Meal List</h2>
+<div *ngFor="let meal of meals">
+    <img [src]="meal.strMealThumb" alt="{{meal.strMeal}}">
+    <h3>{{meal.strMeal}}</h3>
+    <p>{{meal.strCategory}}</p>
+</div>

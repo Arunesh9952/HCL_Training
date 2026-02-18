@@ -1,0 +1,38 @@
+<h2>Meal Search</h2>
+
+<!-- Search by Meal Name -->
+<input
+  type="text"
+  [(ngModel)]="searchText"
+  placeholder="Enter meal name"
+/>
+<button (click)="search()">Search</button>
+
+<br /><br />
+
+<!-- Search by Area -->
+<input
+  type="text"
+  [(ngModel)]="areaText"
+  placeholder="Enter meal area"
+/>
+<button (click)="getByArea()">Get Meals By Area</button>
+
+<br /><br />
+
+<!-- Search by Category -->
+<input
+  type="text"
+  [(ngModel)]="categoryText"
+  placeholder="Enter meal category"
+/>
+<button (click)="getByCategory()">Get Meals By Category</button>
+
+<hr />
+
+<!-- Meal Results -->
+<div *ngFor="let m of meals">
+  <h3>{{ m.strMeal }}</h3>
+  <p>{{ m.strInstructions }}</p>
+  <hr />
+</div>

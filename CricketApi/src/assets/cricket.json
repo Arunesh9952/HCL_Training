@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "India vs Australia",
+    "status": "Live",
+    "venue": "Chennai",
+    "date": "2026-02-05"
+  },
+  {
+    "id": "2",
+    "name": "England vs Pakistan",
+    "status": "Upcoming",
+    "venue": "London",
+    "date": "2026-02-07"
+  },
+  {
+    "id": "3",
+    "name": "Sri Lanka vs South Africa",
+    "status": "Finished",
+    "venue": "Colombo",
+    "date": "2026-02-01"
+  }
+]

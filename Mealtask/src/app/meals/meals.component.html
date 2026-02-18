@@ -1,0 +1,12 @@
+<input type="text" placeholder="Search by name" #name>
+<button (click)="searchByName(name.value)">Search</button>
+
+<input type="text" placeholder="Search by first letter" #letter maxlength="1">
+<button (click)="searchByLetter(letter.value)">Search</button>
+
+<div class="meal-list">
+  <div *ngFor="let meal of meals" class="meal-card">
+    <img [src]="meal.strMealThumb" (click)="viewDetails(meal.idMeal)">
+    <h3 (click)="viewDetails(meal.idMeal)">{{ meal.strMeal }}</h3>
+  </div>
+</div>

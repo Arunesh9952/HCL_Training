@@ -1,0 +1,32 @@
+<h2>Country Search</h2>
+
+<input type="text" [(ngModel)]="searchText" placeholder="Enter country name" />
+<button (click)="search()">Search by Name</button>
+
+<br /><br />
+
+<input type="text" [(ngModel)]="capitalText" placeholder="Enter capital" />
+<button (click)="getCapital()">Search by Capital</button>
+
+<br /><br />
+
+<input type="text" [(ngModel)]="regionText" placeholder="Enter region" />
+<button (click)="getRegion()">Search by Region</button>
+
+<hr />
+
+<div *ngFor="let c of countries">
+  <h3>{{ c.name?.common }}</h3>
+
+  <p><b>Capital:</b> {{ c.capital?.[0] }}</p>
+
+  <p><b>Region:</b> {{ c.region }}</p>
+
+  <p><b>Population:</b> {{ c.population }}</p>
+
+  <hr />
+</div>
+
+<div *ngIf="countries.length === 0">
+  <p>No countries found.</p>
+</div>

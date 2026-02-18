@@ -1,0 +1,11 @@
+<!-- all-countries.component.html -->
+<input type="text" placeholder="Search by Name / Code / Capital"
+       [(ngModel)]="searchText">
+
+<div class="countries">
+  <div class="card" *ngFor="let c of filteredCountries()">
+    <img [src]="c.flags.png" width="100">
+    <h3 (click)="goToDetails(c.cca3)">{{ c.name.common }}</h3>
+    <p>Capital: {{ c.capital?.[0] }}</p>
+  </div>
+</div>
